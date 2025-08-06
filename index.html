@@ -682,12 +682,74 @@
         .quicklinks li.wpshapere_site_title a:focus {
             background-size: contain !important
         }
+
+        .separador {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 3rem 0;
+        }
+
+        .separador::before,
+        .separador::after {
+        content: "";
+        flex: 1;
+        border-bottom: 2px solid #ccc;
+        }
+
+        .separador:not(:empty)::before {
+        margin-right: 1rem;
+        }
+
+        .separador:not(:empty)::after {
+        margin-left: 1rem;
+        }
+
+        .separador span {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #444;
+        font-family: 'Georgia', serif;
+        }
+
+        .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 999;
+        }
+        .modal:target {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .modal-content {
+        background: white;
+        padding: 1rem;
+        max-width: 90%;
+        border-radius: 10px;
+        }
+        .close {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        text-decoration: none;
+        font-size: 2rem;
+        }
     </style>
 </head>
 
 <body
     class="home wp-singular page-template page-template-template-homepage page-template-template-homepage-php page page-id-300 wp-custom-logo wp-embed-responsive wp-theme-poco wp-child-theme-poco-child no-wc-breadcrumb poco-layout-wide elementor-default elementor-kit-13 elementor-page elementor-page-300">
     <div id="page" class="hfeed site">
+        <div id="menuModal" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <img src="wp-content/menu-digital/menu_web.jpeg" alt="Menú" style="max-width: 100%;">
+            </div>
+        </div>
         <div data-elementor-type="header" data-elementor-id="2045"
             class="elementor elementor-2045 elementor-location-header" data-elementor-post-type="elementor_library">
             <div class="elementor-section elementor-top-section elementor-element elementor-element-c5f1e0f elementor-section-stretched elementor-section-height-min-height sticky-header elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
@@ -731,7 +793,7 @@
                                                     class="elementor-item elementor-item-anchor">Productos</a></li>
                                             <li
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3796">
-                                                <a href="menu-digital/"
+                                                <a href="#menuModal"
                                                     class="elementor-item">Menú Digital</a></li>
                                             <li
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3629">
@@ -1031,6 +1093,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="separador">
+                                <span>Clásicas</span>
+                            </div>
+                            <!-- Empanadas cláscias -->
                             <section
                                 class="elementor-section elementor-top-section elementor-element elementor-element-16b070c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                 data-id="16b070c" data-element_type="section"
@@ -1046,38 +1112,6 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-gallery__container">
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2022/12/Vacio-Provoleta-1.jpeg"
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Vacio Provoleta"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDEyMiwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzEyXC9WYWNpby1Qcm92b2xldGEtMS5qcGVnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
-                                                            <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2022/12/Vacio-Provoleta-1.jpeg"
-                                                                data-width="940" data-height="788" aria-label=""
-                                                                role="img"></div>
-                                                            <div class="elementor-gallery-item__overlay"></div>
-                                                            <div class="elementor-gallery-item__content">
-                                                                <div class="elementor-gallery-item__title">
-                                                                    Vacio Provoleta</div>
-                                                            </div>
-                                                        </a>
-                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2022/09/Pollo-Chipotle-.jpg"
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Pollo Chipotle"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA1MywidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9Qb2xsby1DaGlwb3RsZS0uanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
-                                                            <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2022/09/Pollo-Chipotle-.jpg"
-                                                                data-width="900" data-height="720" aria-label=""
-                                                                role="img"></div>
-                                                            <div class="elementor-gallery-item__overlay"></div>
-                                                            <div class="elementor-gallery-item__content">
-                                                                <div class="elementor-gallery-item__title">
-                                                                    Pollo Chipotle</div>
-                                                            </div>
-                                                        </a>
-                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
                                                             href="wp-content/uploads/2022/12/Carne-Clasica.jpeg"
                                                             data-elementor-open-lightbox="yes"
                                                             data-elementor-lightbox-slideshow="cf42106"
@@ -1091,22 +1125,6 @@
                                                             <div class="elementor-gallery-item__content">
                                                                 <div class="elementor-gallery-item__title">
                                                                     Carne Clasica</div>
-                                                            </div>
-                                                        </a>
-                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2022/10/Producto.png"
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Rib-Eye Malbec"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA3OCwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzEwXC9Qcm9kdWN0by5wbmciLCJzbGlkZXNob3ciOiJjZjQyMTA2In0%3D">
-                                                            <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2022/10/Producto-1024x820.png"
-                                                                data-width="980" data-height="785" aria-label=""
-                                                                role="img"></div>
-                                                            <div class="elementor-gallery-item__overlay"></div>
-                                                            <div class="elementor-gallery-item__content">
-                                                                <div class="elementor-gallery-item__title">
-                                                                    Rib-Eye Malbec</div>
                                                             </div>
                                                         </a>
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
@@ -1126,22 +1144,6 @@
                                                             </div>
                                                         </a>
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2022/09/Cebolla-y-Queso.jpg"
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Cebolla y Queso"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA0NCwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9DZWJvbGxhLXktUXVlc28uanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
-                                                            <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2022/09/Cebolla-y-Queso.jpg"
-                                                                data-width="900" data-height="720" aria-label=""
-                                                                role="img"></div>
-                                                            <div class="elementor-gallery-item__overlay"></div>
-                                                            <div class="elementor-gallery-item__content">
-                                                                <div class="elementor-gallery-item__title">
-                                                                    Cebolla y Queso</div>
-                                                            </div>
-                                                        </a>
-                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
                                                             href="wp-content/uploads/2022/09/Elote-y-Queso.jpg"
                                                             data-elementor-open-lightbox="yes"
                                                             data-elementor-lightbox-slideshow="cf42106"
@@ -1155,6 +1157,22 @@
                                                             <div class="elementor-gallery-item__content">
                                                                 <div class="elementor-gallery-item__title">
                                                                     Elote y Queso</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
+                                                            href="wp-content/uploads/2022/09/Cebolla-y-Queso.jpg"
+                                                            data-elementor-open-lightbox="yes"
+                                                            data-elementor-lightbox-slideshow="cf42106"
+                                                            data-elementor-lightbox-title="Cebolla y Queso"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA0NCwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9DZWJvbGxhLXktUXVlc28uanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
+                                                            <div class="e-gallery-image elementor-gallery-item__image"
+                                                                data-thumbnail="wp-content/uploads/2022/09/Cebolla-y-Queso.jpg"
+                                                                data-width="900" data-height="720" aria-label=""
+                                                                role="img"></div>
+                                                            <div class="elementor-gallery-item__overlay"></div>
+                                                            <div class="elementor-gallery-item__content">
+                                                                <div class="elementor-gallery-item__title">
+                                                                    Cebolla y Queso</div>
                                                             </div>
                                                         </a>
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
@@ -1174,51 +1192,51 @@
                                                             </div>
                                                         </a>
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2022/09/American-Chicken.jpg"
+                                                            href="wp-content/uploads/2022/12/Jaon-y-Queso.jpeg"
                                                             data-elementor-open-lightbox="yes"
                                                             data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="American Chicken"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA0MCwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9BbWVyaWNhbi1DaGlja2VuLmpwZyIsInNsaWRlc2hvdyI6ImNmNDIxMDYifQ%3D%3D">
+                                                            data-elementor-lightbox-title="Jaon y Queso"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDEyMSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzEyXC9KYW9uLXktUXVlc28uanBlZyIsInNsaWRlc2hvdyI6ImNmNDIxMDYifQ%3D%3D">
                                                             <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2022/09/American-Chicken.jpg"
-                                                                data-width="900" data-height="720" aria-label=""
+                                                                data-thumbnail="wp-content/uploads/2022/12/Jaon-y-Queso.jpeg"
+                                                                data-width="940" data-height="788" aria-label=""
                                                                 role="img"></div>
                                                             <div class="elementor-gallery-item__overlay"></div>
                                                             <div class="elementor-gallery-item__content">
                                                                 <div class="elementor-gallery-item__title">
-                                                                    American Chicken</div>
+                                                                    Jamón y Queso</div>
                                                             </div>
                                                         </a>
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2022/09/Choripan-.jpg"
+                                                            href="wp-content/uploads/2022/09/Pollo-Chipotle-.jpg"
                                                             data-elementor-open-lightbox="yes"
                                                             data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Choripan"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA0NSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9DaG9yaXBhbi0uanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
+                                                            data-elementor-lightbox-title="Pollo Chipotle"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA1MywidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9Qb2xsby1DaGlwb3RsZS0uanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
                                                             <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2022/09/Choripan-.jpg"
+                                                                data-thumbnail="wp-content/uploads/2022/09/Pollo-Chipotle-.jpg"
                                                                 data-width="900" data-height="720" aria-label=""
                                                                 role="img"></div>
                                                             <div class="elementor-gallery-item__overlay"></div>
                                                             <div class="elementor-gallery-item__content">
                                                                 <div class="elementor-gallery-item__title">
-                                                                    Choripan</div>
+                                                                    Pollo Chipotle</div>
                                                             </div>
                                                         </a>
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2022/09/Pepito-de-Milanesa-1-1.jpg"
+                                                            href="wp-content/uploads/2025/08/peperoni_queso.jpeg"
                                                             data-elementor-open-lightbox="yes"
                                                             data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Pepito de Milanesa"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA1MiwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9QZXBpdG8tZGUtTWlsYW5lc2EtMS0xLmpwZyIsInNsaWRlc2hvdyI6ImNmNDIxMDYifQ%3D%3D">
+                                                            data-elementor-lightbox-title="Peperoni queso"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDAzOSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9BbGZham9yLWRlLU1haWNlbmEuanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
                                                             <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2022/09/Pepito-de-Milanesa-1-1.jpg"
+                                                                data-thumbnail="wp-content/uploads/2025/08/peperoni_queso.jpeg"
                                                                 data-width="900" data-height="720" aria-label=""
                                                                 role="img"></div>
                                                             <div class="elementor-gallery-item__overlay"></div>
                                                             <div class="elementor-gallery-item__content">
                                                                 <div class="elementor-gallery-item__title">
-                                                                    Pepito de Milanesa</div>
+                                                                    Peperoni queso</div>
                                                             </div>
                                                         </a>
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
@@ -1237,53 +1255,77 @@
                                                                     Atun</div>
                                                             </div>
                                                         </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="separador">
+                                <span>Gourmet</span>
+                            </div>
+                            <!-- Empanadas gourmet -->
+                            <section
+                                class="elementor-section elementor-top-section elementor-element elementor-element-16b070c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                data-id="16b070c" data-element_type="section"
+                                data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4719d55"
+                                        data-id="4719d55" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-cf42106 elementor-widget elementor-widget-gallery"
+                                                data-id="cf42106" data-element_type="widget"
+                                                data-settings="{&quot;columns&quot;:3,&quot;aspect_ratio&quot;:&quot;4:3&quot;,&quot;overlay_title&quot;:&quot;title&quot;,&quot;lazyload&quot;:&quot;yes&quot;,&quot;gallery_layout&quot;:&quot;grid&quot;,&quot;columns_tablet&quot;:2,&quot;columns_mobile&quot;:1,&quot;gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;link_to&quot;:&quot;file&quot;,&quot;overlay_background&quot;:&quot;yes&quot;,&quot;content_hover_animation&quot;:&quot;fade-in&quot;}"
+                                                data-widget_type="gallery.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-gallery__container">
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2022/12/Jaon-y-Queso.jpeg"
+                                                            href="wp-content/uploads/2022/09/American-Chicken.jpg"
                                                             data-elementor-open-lightbox="yes"
                                                             data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Jaon y Queso"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDEyMSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzEyXC9KYW9uLXktUXVlc28uanBlZyIsInNsaWRlc2hvdyI6ImNmNDIxMDYifQ%3D%3D">
+                                                            data-elementor-lightbox-title="American Chicken"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA0MCwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9BbWVyaWNhbi1DaGlja2VuLmpwZyIsInNsaWRlc2hvdyI6ImNmNDIxMDYifQ%3D%3D">
                                                             <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2022/12/Jaon-y-Queso.jpeg"
+                                                                data-thumbnail="wp-content/uploads/2022/09/American-Chicken.jpg"
+                                                                data-width="900" data-height="720" aria-label=""
+                                                                role="img"></div>
+                                                            <div class="elementor-gallery-item__overlay"></div>
+                                                            <div class="elementor-gallery-item__content">
+                                                                <div class="elementor-gallery-item__title">
+                                                                    American Chicken</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
+                                                            href="wp-content/uploads/2022/10/Producto.png"
+                                                            data-elementor-open-lightbox="yes"
+                                                            data-elementor-lightbox-slideshow="cf42106"
+                                                            data-elementor-lightbox-title="Rib-Eye Malbec"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA3OCwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzEwXC9Qcm9kdWN0by5wbmciLCJzbGlkZXNob3ciOiJjZjQyMTA2In0%3D">
+                                                            <div class="e-gallery-image elementor-gallery-item__image"
+                                                                data-thumbnail="wp-content/uploads/2022/10/Producto-1024x820.png"
+                                                                data-width="980" data-height="785" aria-label=""
+                                                                role="img"></div>
+                                                            <div class="elementor-gallery-item__overlay"></div>
+                                                            <div class="elementor-gallery-item__content">
+                                                                <div class="elementor-gallery-item__title">
+                                                                    Rib-Eye Malbec</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
+                                                            href="wp-content/uploads/2022/12/Vacio-Provoleta-1.jpeg"
+                                                            data-elementor-open-lightbox="yes"
+                                                            data-elementor-lightbox-slideshow="cf42106"
+                                                            data-elementor-lightbox-title="Vacio Provoleta"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDEyMiwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzEyXC9WYWNpby1Qcm92b2xldGEtMS5qcGVnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
+                                                            <div class="e-gallery-image elementor-gallery-item__image"
+                                                                data-thumbnail="wp-content/uploads/2022/12/Vacio-Provoleta-1.jpeg"
                                                                 data-width="940" data-height="788" aria-label=""
                                                                 role="img"></div>
                                                             <div class="elementor-gallery-item__overlay"></div>
                                                             <div class="elementor-gallery-item__content">
                                                                 <div class="elementor-gallery-item__title">
-                                                                    Jaon y Queso</div>
-                                                            </div>
-                                                        </a>
-                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2022/09/Alfajor-de-Maicena.jpg"
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Alfajor de Maicena"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDAzOSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9BbGZham9yLWRlLU1haWNlbmEuanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
-                                                            <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2022/09/Alfajor-de-Maicena.jpg"
-                                                                data-width="900" data-height="720" aria-label=""
-                                                                role="img"></div>
-                                                            <div class="elementor-gallery-item__overlay"></div>
-                                                            <div class="elementor-gallery-item__content">
-                                                                <div class="elementor-gallery-item__title">
-                                                                    Alfajor de Maicena</div>
-                                                            </div>
-                                                        </a>
-                                                        <!-- 2025 products -->
-                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2025/08/alfajor_mil_hojas.jpg"
-                                                            data-elementor-open-lightbox="yes"
-                                                            data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Alfajor mil hojas"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDAzOSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9BbGZham9yLWRlLU1haWNlbmEuanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
-                                                            <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2025/08/alfajor_mil_hojas.jpg"
-                                                                data-width="900" data-height="720" aria-label=""
-                                                                role="img"></div>
-                                                            <div class="elementor-gallery-item__overlay"></div>
-                                                            <div class="elementor-gallery-item__content">
-                                                                <div class="elementor-gallery-item__title">
-                                                                    Alfajor mil hojas</div>
+                                                                    Vacio Provoleta</div>
                                                             </div>
                                                         </a>
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
@@ -1318,20 +1360,119 @@
                                                                     Pastor</div>
                                                             </div>
                                                         </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="separador">
+                                <span>Sandwiches</span>
+                            </div>
+                            <!-- Sandwiches -->
+                            <section
+                                class="elementor-section elementor-top-section elementor-element elementor-element-16b070c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                data-id="16b070c" data-element_type="section"
+                                data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4719d55"
+                                        data-id="4719d55" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-cf42106 elementor-widget elementor-widget-gallery"
+                                                data-id="cf42106" data-element_type="widget"
+                                                data-settings="{&quot;columns&quot;:3,&quot;aspect_ratio&quot;:&quot;4:3&quot;,&quot;overlay_title&quot;:&quot;title&quot;,&quot;lazyload&quot;:&quot;yes&quot;,&quot;gallery_layout&quot;:&quot;grid&quot;,&quot;columns_tablet&quot;:2,&quot;columns_mobile&quot;:1,&quot;gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;link_to&quot;:&quot;file&quot;,&quot;overlay_background&quot;:&quot;yes&quot;,&quot;content_hover_animation&quot;:&quot;fade-in&quot;}"
+                                                data-widget_type="gallery.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-gallery__container">
                                                         <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
-                                                            href="wp-content/uploads/2025/08/peperoni_queso.jpeg"
+                                                            href="wp-content/uploads/2022/09/Choripan-.jpg"
                                                             data-elementor-open-lightbox="yes"
                                                             data-elementor-lightbox-slideshow="cf42106"
-                                                            data-elementor-lightbox-title="Peperoni queso"
-                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDAzOSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9BbGZham9yLWRlLU1haWNlbmEuanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
+                                                            data-elementor-lightbox-title="Choripan"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA0NSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9DaG9yaXBhbi0uanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
                                                             <div class="e-gallery-image elementor-gallery-item__image"
-                                                                data-thumbnail="wp-content/uploads/2025/08/peperoni_queso.jpeg"
+                                                                data-thumbnail="wp-content/uploads/2022/09/Choripan-.jpg"
                                                                 data-width="900" data-height="720" aria-label=""
                                                                 role="img"></div>
                                                             <div class="elementor-gallery-item__overlay"></div>
                                                             <div class="elementor-gallery-item__content">
                                                                 <div class="elementor-gallery-item__title">
-                                                                    Peperoni queso</div>
+                                                                    Choripan</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
+                                                            href="wp-content/uploads/2022/09/Pepito-de-Milanesa-1-1.jpg"
+                                                            data-elementor-open-lightbox="yes"
+                                                            data-elementor-lightbox-slideshow="cf42106"
+                                                            data-elementor-lightbox-title="Pepito de Milanesa"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDA1MiwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9QZXBpdG8tZGUtTWlsYW5lc2EtMS0xLmpwZyIsInNsaWRlc2hvdyI6ImNmNDIxMDYifQ%3D%3D">
+                                                            <div class="e-gallery-image elementor-gallery-item__image"
+                                                                data-thumbnail="wp-content/uploads/2022/09/Pepito-de-Milanesa-1-1.jpg"
+                                                                data-width="900" data-height="720" aria-label=""
+                                                                role="img"></div>
+                                                            <div class="elementor-gallery-item__overlay"></div>
+                                                            <div class="elementor-gallery-item__content">
+                                                                <div class="elementor-gallery-item__title">
+                                                                    Pepito de Milanesa</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="separador">
+                                <span>Postres</span>
+                            </div>
+                            <!-- Postres -->
+                            <section
+                                class="elementor-section elementor-top-section elementor-element elementor-element-16b070c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                data-id="16b070c" data-element_type="section"
+                                data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4719d55"
+                                        data-id="4719d55" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-cf42106 elementor-widget elementor-widget-gallery"
+                                                data-id="cf42106" data-element_type="widget"
+                                                data-settings="{&quot;columns&quot;:3,&quot;aspect_ratio&quot;:&quot;4:3&quot;,&quot;overlay_title&quot;:&quot;title&quot;,&quot;lazyload&quot;:&quot;yes&quot;,&quot;gallery_layout&quot;:&quot;grid&quot;,&quot;columns_tablet&quot;:2,&quot;columns_mobile&quot;:1,&quot;gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;link_to&quot;:&quot;file&quot;,&quot;overlay_background&quot;:&quot;yes&quot;,&quot;content_hover_animation&quot;:&quot;fade-in&quot;}"
+                                                data-widget_type="gallery.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-gallery__container">
+                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
+                                                            href="wp-content/uploads/2022/09/Alfajor-de-Maicena.jpg"
+                                                            data-elementor-open-lightbox="yes"
+                                                            data-elementor-lightbox-slideshow="cf42106"
+                                                            data-elementor-lightbox-title="Alfajor de Maicena"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDAzOSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9BbGZham9yLWRlLU1haWNlbmEuanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
+                                                            <div class="e-gallery-image elementor-gallery-item__image"
+                                                                data-thumbnail="wp-content/uploads/2022/09/Alfajor-de-Maicena.jpg"
+                                                                data-width="900" data-height="720" aria-label=""
+                                                                role="img"></div>
+                                                            <div class="elementor-gallery-item__overlay"></div>
+                                                            <div class="elementor-gallery-item__content">
+                                                                <div class="elementor-gallery-item__title">
+                                                                    Alfajor de Maicena</div>
+                                                            </div>
+                                                        </a>
+                                                        <!-- 2025 products -->
+                                                        <a class="e-gallery-item elementor-gallery-item elementor-animated-content"
+                                                            href="wp-content/uploads/2025/08/alfajor_mil_hojas.jpg"
+                                                            data-elementor-open-lightbox="yes"
+                                                            data-elementor-lightbox-slideshow="cf42106"
+                                                            data-elementor-lightbox-title="Alfajor mil hojas"
+                                                            data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6NDAzOSwidXJsIjoiaHR0cDpcL1wvbG9jYWxob3N0Ojg4ODhcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA5XC9BbGZham9yLWRlLU1haWNlbmEuanBnIiwic2xpZGVzaG93IjoiY2Y0MjEwNiJ9">
+                                                            <div class="e-gallery-image elementor-gallery-item__image"
+                                                                data-thumbnail="wp-content/uploads/2025/08/alfajor_mil_hojas.jpg"
+                                                                data-width="900" data-height="720" aria-label=""
+                                                                role="img"></div>
+                                                            <div class="elementor-gallery-item__overlay"></div>
+                                                            <div class="elementor-gallery-item__content">
+                                                                <div class="elementor-gallery-item__title">
+                                                                    Alfajor mil hojas</div>
                                                             </div>
                                                         </a>
                                                     </div>
